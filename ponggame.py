@@ -106,10 +106,10 @@ while True:
         tools.write("Player 1:{}  Player 2:{}".format(score_1, score_2),align="center", font=("Ariel", 24, "normal"))
 
     #When the paddle hit the ball
-    if (ball.xcor() < 350 and ball.xcor() > 340) and (ball.ycor() < paddle_2.ycor() + 40 and ball.ycor() -40):
+    if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_2.ycor() + 40 and ball.ycor() > paddle_2.ycor() -40):
         ball.setx(340)
         ball.dx *= -1
-    if (ball.xcor() > -350 and ball.xcor() < -340) and (ball.ycor() < paddle_1.ycor() + 40 and ball.ycor() -40):
+    if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_1.ycor() + 40 and ball.ycor() > paddle_1.ycor() -40):
         ball.setx(-340)
         ball.dx *= -1
 
